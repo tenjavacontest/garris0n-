@@ -1,0 +1,5 @@
+name: Placeholder
+version: ${project.version}
+author: Garris0n
+main: com.garris0n.Placeholder.Main
+commands:
