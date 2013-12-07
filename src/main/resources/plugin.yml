@@ -1,5 +1,7 @@
-name: Placeholder
+name: ${project.name}
 version: ${project.version}
 author: Garris0n
-main: com.garris0n.Placeholder.Main
+main: com.garris0n.EntityGUI.Main
 commands:
+  entityGUI{
+    aliases: egui
