@@ -10,15 +10,7 @@ public interface GUIRunnable{
      * @param player the player
      * @param shift true if this click was a shift click, false otherwise
      */
-    public void leftClick(Player player, boolean shift);
-
-    /**
-     * Called on a right click.
-     *
-     * @param player the player
-     * @param shift true if this click was a shift click, false otherwise
-     */
-    public void rightClick(Player player, boolean shift);
+    public void click(Player player, NormalClickType type, boolean shift);
 
     /**
      * Called on a double click.
