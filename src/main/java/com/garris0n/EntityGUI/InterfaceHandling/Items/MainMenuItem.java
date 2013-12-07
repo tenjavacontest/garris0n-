@@ -4,6 +4,7 @@ import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
 import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.PageCow;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.PagePig;
 import com.garris0n.EntityGUI.Util.EZItemStack;
 import com.garris0n.EntityGUI.Util.Util;
@@ -14,8 +15,8 @@ import org.bukkit.entity.Player;
 
 public enum MainMenuItem{
 
-    PIG(PagePig.class, EntityType.PIG);
-
+    PIG(PagePig.class, EntityType.PIG),
+    COW(PageCow.class, EntityType.COW);
 
 
     private Class<? extends Page> clazz;

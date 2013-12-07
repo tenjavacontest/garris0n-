@@ -1,5 +1,10 @@
 package com.garris0n.EntityGUI.Util;
 
+import com.garris0n.EntityGUI.GUI.GUIItemStack;
+import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
+import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 
@@ -63,5 +68,27 @@ public class Util{
 
     }
 
+    /**
+     * Gets a GuiItemStack for use as a border.
+     *
+     * @return a border item
+     */
+    public static GUIItemStack getBorderItem(){
+
+        EZItemStack item = new EZItemStack(Material.WALL_SIGN).name("");
+
+        return new GUIItemStack(item, new GUIRunnable(){
+
+            @Override
+            public void click(Player player, NormalClickType type, boolean shift){}
+
+            @Override
+            public void doubleClick(Player player){}
+
+            @Override
+            public void numberKeyClick(Player player, int key){}
+        });
+
+    }
 
 }
