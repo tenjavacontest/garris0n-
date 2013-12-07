@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.garris0n</groupId>
-    <artifactId>PLACEHOLDER</artifactId>
+    <artifactId>EntityGUI</artifactId>
     <version>1.0</version>
-    <name>PLACEHOLDER</name>
+    <name>EntityGUI</name>
     <build>
-        <finalName>PLACEHOLDER</finalName>
+        <finalName>EntityGUI</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>
