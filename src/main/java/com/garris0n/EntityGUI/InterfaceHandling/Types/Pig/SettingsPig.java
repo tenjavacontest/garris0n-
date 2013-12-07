@@ -4,6 +4,7 @@ import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
 import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
 import com.garris0n.EntityGUI.InterfaceHandling.SettingsAgeable;
+import com.garris0n.EntityGUI.Main;
 import com.garris0n.EntityGUI.Util.EZItemStack;
 import com.garris0n.EntityGUI.Util.Util;
 import org.bukkit.ChatColor;
@@ -13,6 +14,18 @@ import org.bukkit.entity.Player;
 public class SettingsPig extends SettingsAgeable{
 
     private boolean saddle;
+
+    public boolean getSaddle(){
+
+        return saddle;
+
+    }
+
+    public void setSaddle(boolean saddle){
+
+        this.saddle = saddle;
+
+    }
 
     @Override
     public void draw(GUIItemStack[] items){
@@ -27,7 +40,12 @@ public class SettingsPig extends SettingsAgeable{
                     @Override
                     public void click(Player player, NormalClickType type, boolean shift){
 
+                        if(Main.interfaceHandler.settings.containsKey(player.getName())){
 
+                            ((SettingsPig) Main.interfaceHandler.settings.get(player.getName())).setSaddle(!getSaddle());
+                            Main.interfaceHandler.reDraw(player);
+
+                        }
 
                     }
 
@@ -36,6 +54,7 @@ public class SettingsPig extends SettingsAgeable{
 
                     @Override
                     public void numberKeyClick(Player player, int key){}
+
                 });
 
     }

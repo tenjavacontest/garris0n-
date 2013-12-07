@@ -1,13 +1,13 @@
 package com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep;
 
 import com.garris0n.EntityGUI.GUI.*;
-import com.garris0n.EntityGUI.InterfaceHandling.Items.MainMenuItem;
+import com.garris0n.EntityGUI.InterfaceHandling.Items.PageType;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
 import org.bukkit.ChatColor;
 
 public class PageSheep extends Page{
 
-    public PageSheep(MainMenuItem item){
+    public PageSheep(PageType item){
 
         this.item = item;
 

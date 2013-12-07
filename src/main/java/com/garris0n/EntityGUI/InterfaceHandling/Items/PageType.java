@@ -14,7 +14,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-public enum MainMenuItem{
+public enum PageType{
 
     PIG(new PagePig(this), EntityType.PIG),
     COW(new PageCow(this), EntityType.COW),
@@ -24,7 +24,7 @@ public enum MainMenuItem{
     private Page page;
     private EntityType type;
 
-    MainMenuItem(Page page, EntityType type){
+    PageType(Page page, EntityType type){
 
         this.page = page;
         this.type = type;
