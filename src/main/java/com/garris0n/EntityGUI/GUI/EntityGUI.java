@@ -1,5 +1,7 @@
 package com.garris0n.EntityGUI.GUI;
 
+import com.garris0n.EntityGUI.Main;
+import com.garris0n.EntityGUI.Util.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -45,9 +47,55 @@ public class EntityGUI{
      */
     public void open(Player player){
 
+        Main.handler.menuOpened(player, this);
 
+        if(Util.openInventoryMatches(player, title, size.getSize())){
+
+            openInside(player);
+            return;
+
+        }
+
+        player.openInventory(getInventory());
+
+    }
+
+    /**
+     * We use this method because opening the inventory resets your cursor and is annoying.
+     * This allows us to, in some cases, open inside their current inventory, which
+     * is more smooth.
+     *
+     * @param player the player
+     */
+    private void openInside(Player player){
+
+        Inventory inventory = player.getOpenInventory().getTopInventory();
+
+        for(int i = 0; i < size.getSize(); i++)
+            if(items.length > i)
+                inventory.setItem(i, items[i].getItemStack());
 
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

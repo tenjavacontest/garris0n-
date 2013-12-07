@@ -15,11 +15,12 @@ public class Util{
      * @param title the title of the inventory to be opened
      * @return
      */
-    public static boolean openInventoryMatches(Player player, String title){
+    public static boolean openInventoryMatches(Player player, String title, int size){
 
         return !player.getOpenInventory().getTopInventory().equals(player.getInventory()) &&
                 player.getOpenInventory().getTopInventory().getType().equals(InventoryType.CHEST) &&
-                player.getOpenInventory().getTopInventory().getTitle().equals(title);
+                player.getOpenInventory().getTopInventory().getTitle().equals(title) &&
+                player.getOpenInventory().getTopInventory().getSize() == size;
 
     }
 
