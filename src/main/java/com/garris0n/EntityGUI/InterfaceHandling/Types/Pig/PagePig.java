@@ -8,7 +8,9 @@ public class PagePig extends Page{
 
     @Override
     public void spawn(Player player){
-        //TODO: spawn
+
+
+
     }
 
     @Override

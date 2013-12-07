@@ -6,7 +6,7 @@ import com.garris0n.EntityGUI.Util.Util;
 
 public class Settings{
 
-    private int amountToSpawn = 0;
+    private int amountToSpawn = 1;
 
     public int getAmountToSpawn(){
 

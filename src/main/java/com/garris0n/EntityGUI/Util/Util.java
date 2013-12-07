@@ -3,8 +3,7 @@ package com.garris0n.EntityGUI.Util;
 import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
 import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 
@@ -103,6 +102,23 @@ public class Util{
             return ChatColor.GREEN;
 
         return ChatColor.RED;
+
+    }
+
+    /**
+     * Rotates through the DyeColor values.
+     *
+     * @param color input color
+     * @return the next color
+     */
+    public static DyeColor rotate(DyeColor color){
+
+        int index = color.getWoolData() + 1;
+
+        if(index >= DyeColor.values().length)
+            return DyeColor.WHITE;
+
+        return DyeColor.getByWoolData((byte) index);
 
     }
 
