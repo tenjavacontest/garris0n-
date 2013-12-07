@@ -23,10 +23,4 @@ public class PageCow extends Page{
 
     }
 
-    @Override
-    public void openGUI(Player player){
-
-
-
-    }
 }

@@ -4,7 +4,6 @@ import com.garris0n.EntityGUI.GUI.*;
 import com.garris0n.EntityGUI.InterfaceHandling.Items.MainMenuItem;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 
 public class PagePig extends Page{
 
@@ -26,10 +25,4 @@ public class PagePig extends Page{
 
     }
 
-    @Override
-    public void openGUI(Player player){
-
-        getGUI().open(player);
-
-    }
 }

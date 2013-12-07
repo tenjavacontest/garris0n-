@@ -13,7 +13,11 @@ public abstract class Page{
 
     public abstract EntityGUI getGUI();
 
-    public abstract void openGUI(Player player);
+    public void openGUI(Player player){
+
+        getGUI().open(player);
+
+    }
 
     public void addHotbar(GUIItemStack[] items){
 
