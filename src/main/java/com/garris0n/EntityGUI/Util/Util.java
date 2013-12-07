@@ -17,7 +17,7 @@ public class Util{
      *
      * @param player the player
      * @param title the title of the inventory to be opened
-     * @return
+     * @return true if the inventory can be opened in the current one, false otherwise
      */
     public static boolean openInventoryMatches(Player player, String title, int size){
 
@@ -61,7 +61,7 @@ public class Util{
         String[] split = string.split(" ");
 
         for(String s : split)
-            builder.append(" ").append(capitalize(string));
+            builder.append(" ").append(capitalize(s));
 
         return builder.substring(1);
 

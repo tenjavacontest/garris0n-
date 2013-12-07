@@ -26,6 +26,7 @@ public class Settings{
             items[i] = Util.getBorderItem();
 
         items[0] = PageHotbarItem.DELETE.getGuiItem();
+        items[1] = PageHotbarItem.SPAWN.getGuiItem();
 
     }
 

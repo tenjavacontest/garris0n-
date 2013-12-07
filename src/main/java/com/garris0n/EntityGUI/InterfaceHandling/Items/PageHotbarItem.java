@@ -28,6 +28,25 @@ public enum PageHotbarItem{
 
                 @Override
                 public void numberKeyClick(Player player, int key){}
+            }),
+    SPAWN(new EZItemStack(Material.MONSTER_EGG)
+            .name(ChatColor.AQUA.toString() + ChatColor.BOLD + "Spawn")
+            .lore(ChatColor.DARK_PURPLE + "Click to spawn this entity."),
+            new GUIRunnable(){
+
+                @Override
+                public void click(Player player, NormalClickType type, boolean shift){
+
+                    if(Main.interfaceHandler.getPageType(player) != null)
+                        Main.interfaceHandler.getPageType(player).getPage().spawn(player);
+
+                }
+
+                @Override
+                public void doubleClick(Player player){}
+
+                @Override
+                public void numberKeyClick(Player player, int key){}
             });
 
     private EZItemStack item;

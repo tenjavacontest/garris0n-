@@ -28,7 +28,7 @@ public class SettingsSheep extends SettingsAgeable{
 
     public void nextColor(){
 
-        this.color = Util.rotate(color);
+        setColor(Util.rotate(color));
 
     }
 

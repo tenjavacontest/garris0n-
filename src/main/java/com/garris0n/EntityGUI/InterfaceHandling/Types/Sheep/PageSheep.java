@@ -16,10 +16,12 @@ public class PageSheep extends Page{
 
         for(int i = 0; i < settings.getAmountToSpawn(); i++){
 
-            Sheep Sheep = (Sheep) player.getWorld().spawnEntity(player.getLocation(), EntityType.SHEEP);
+            Sheep sheep = (Sheep) player.getWorld().spawnEntity(player.getLocation(), EntityType.SHEEP);
 
             if(settings.getBaby())
-                Sheep.setBaby();
+                sheep.setBaby();
+
+            sheep.setColor(settings.getColor());
 
         }
 
