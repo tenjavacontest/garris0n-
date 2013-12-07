@@ -23,7 +23,7 @@ public class GUIItemStack{
      *
      * @return the ItemStack
      */
-    public ItemStack getItem(){
+    public ItemStack getItemStack(){
 
         return item.clone();
 
