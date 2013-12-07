@@ -32,7 +32,7 @@ public class Util{
      */
     public static String capitalize(String string){
 
-        char[] chars = string.toCharArray();
+        char[] chars = string.toLowerCase().toCharArray();
 
         chars[0] = Character.toUpperCase(chars[0]);
 
