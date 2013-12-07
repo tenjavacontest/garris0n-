@@ -19,7 +19,10 @@ public class PageCow extends Page{
 
         GUISize size = GUISize.EXTRA_LARGE;
 
-        return new EntityGUI(size, new GUIItemStack[size.getSize()], ChatColor.BOLD + "Cow Menu");
+        GUIItemStack[] items = new GUIItemStack[size.getSize()];
+        addHotbar(items);
+
+        return new EntityGUI(size, items, ChatColor.BOLD + "Cow Menu");
 
     }
 
