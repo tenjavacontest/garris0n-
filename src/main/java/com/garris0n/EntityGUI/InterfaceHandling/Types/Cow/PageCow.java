@@ -1,15 +1,14 @@
 package com.garris0n.EntityGUI.InterfaceHandling.Types.Cow;
 
-import com.garris0n.EntityGUI.GUI.EntityGUI;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
-import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
 
 public class PageCow extends Page{
 
     @Override
-    public EntityGUI getGUI(Player player){
+    public String getInventoryTitle(){
 
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return ChatColor.BOLD + "Cow Menu";
+
     }
-
 }
