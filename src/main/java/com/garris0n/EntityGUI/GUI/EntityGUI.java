@@ -93,7 +93,8 @@ public class EntityGUI{
 
         for(int i = 0; i < size.getSize(); i++)
             if(items.length > i)
-                inventory.setItem(i, items[i].getItemStack());
+                if(items[i] != null)
+                    inventory.setItem(i, items[i].getItemStack());
 
         Main.guiHandler.menuOpened(player, this);
 
