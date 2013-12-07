@@ -4,23 +4,14 @@ import com.garris0n.EntityGUI.GUI.*;
 import com.garris0n.EntityGUI.InterfaceHandling.Items.PageType;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 public class PageSheep extends Page{
 
-    public PageSheep(PageType item){
-
-        this.item = item;
-
-    }
 
     @Override
-    public EntityGUI getGUI(){
+    public EntityGUI getGUI(Player player){
 
-        GUISize size = GUISize.EXTRA_LARGE;
-
-        GUIItemStack[] items = new GUIItemStack[size.getSize()];
-
-        return new EntityGUI(size, items, ChatColor.BOLD + "Sheep Menu");
-
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }
