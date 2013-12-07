@@ -1,6 +1,7 @@
 package com.garris0n.EntityGUI.GUI;
 
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
+import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
 import com.garris0n.EntityGUI.Util.EZItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -39,16 +40,16 @@ public class GUIItemStack{
     public void click(Player player, ClickType type, int key){
 
         if(type.equals(ClickType.RIGHT))
-            runnable.rightClick(player, false);
+            runnable.click(player, NormalClickType.RIGHT, false);
 
         else if(type.equals(ClickType.SHIFT_RIGHT))
-            runnable.rightClick(player, true);
+            runnable.click(player, NormalClickType.RIGHT, true);
 
         else if(type.equals(ClickType.LEFT))
-            runnable.leftClick(player, false);
+            runnable.click(player, NormalClickType.LEFT, false);
 
         else if(type.equals(ClickType.SHIFT_LEFT))
-            runnable.leftClick(player, true);
+            runnable.click(player, NormalClickType.LEFT, true);
 
         else if(type.equals(ClickType.DOUBLE_CLICK))
             runnable.doubleClick(player);
