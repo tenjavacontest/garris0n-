@@ -4,7 +4,9 @@ import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
 import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
-import com.garris0n.EntityGUI.InterfaceHandling.Types.*;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Cow.PageCow;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.PagePig;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep.PageSheep;
 import com.garris0n.EntityGUI.Util.EZItemStack;
 import com.garris0n.EntityGUI.Util.Util;
 import org.bukkit.ChatColor;
@@ -12,46 +14,26 @@ import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-import java.lang.reflect.InvocationTargetException;
-
 public enum MainMenuItem{
 
-    PIG(PagePig.class, EntityType.PIG),
-    COW(PageCow.class, EntityType.COW),
-    SHEEP(PageSheep.class, EntityType.SHEEP);
+    PIG(new PagePig(this), EntityType.PIG),
+    COW(new PageCow(this), EntityType.COW),
+    SHEEP(new PageSheep(this), EntityType.SHEEP);
 
 
-    private Class<? extends Page> clazz;
+    private Page page;
     private EntityType type;
 
-    MainMenuItem(Class<? extends Page> clazz, EntityType type){
+    MainMenuItem(Page page, EntityType type){
 
-        this.clazz = clazz;
+        this.page = page;
         this.type = type;
 
     }
 
     public Page getPage(){
 
-        try{
-
-            return clazz.getConstructor(MainMenuItem.class).newInstance(this);
-
-        }
-        catch(InstantiationException e){
-            e.printStackTrace();
-        }
-        catch(IllegalAccessException e){
-            e.printStackTrace();
-        }
-        catch(NoSuchMethodException e){
-            e.printStackTrace();
-        }
-        catch(InvocationTargetException e){
-            e.printStackTrace();
-        }
-
-        return null;
+        return this.page;
 
     }
 

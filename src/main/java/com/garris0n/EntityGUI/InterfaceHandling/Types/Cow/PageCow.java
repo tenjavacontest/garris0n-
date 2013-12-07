@@ -1,13 +1,13 @@
-package com.garris0n.EntityGUI.InterfaceHandling.Types;
+package com.garris0n.EntityGUI.InterfaceHandling.Types.Cow;
 
 import com.garris0n.EntityGUI.GUI.*;
 import com.garris0n.EntityGUI.InterfaceHandling.Items.MainMenuItem;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
 import org.bukkit.ChatColor;
 
-public class PageSheep extends Page{
+public class PageCow extends Page{
 
-    public PageSheep(MainMenuItem item){
+    public PageCow(MainMenuItem item){
 
         this.item = item;
 
@@ -21,7 +21,8 @@ public class PageSheep extends Page{
         GUIItemStack[] items = new GUIItemStack[size.getSize()];
         addHotbar(items);
 
-        return new EntityGUI(size, items, ChatColor.BOLD + "Sheep Menu");
+        return new EntityGUI(size, items, ChatColor.BOLD + "Cow Menu");
 
     }
+
 }
