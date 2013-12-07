@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 public enum MainMenuItem{
 
-    PIG(new EZItemStack(Material.MONSTER_EGG, 1, (short) EntityType.PIG.getTypeId()).name(ChatColor.AQUA + "Pig"),
+    PIG(new EZItemStack(Material.MONSTER_EGG, 1, EntityType.PIG.getTypeId()).name(ChatColor.AQUA + "Pig"),
             new GUIRunnable(){
 
                 @Override
@@ -28,7 +28,7 @@ public enum MainMenuItem{
                 @Override
                 public void numberKeyClick(Player player, int key){}
             }),
-    COW(new EZItemStack(Material.MONSTER_EGG, 1, (short) EntityType.COW.getTypeId()).name(ChatColor.AQUA + "Cow"),
+    COW(new EZItemStack(Material.MONSTER_EGG, 1, EntityType.COW.getTypeId()).name(ChatColor.AQUA + "Cow"),
             new GUIRunnable(){
 
                 @Override
