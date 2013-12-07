@@ -15,7 +15,7 @@ public class InterfaceHandler{
         for(int i = 0; i < MainMenuItem.values().length; i++)
             items[i] = MainMenuItem.values()[i].getGuiItem();
 
-        new EntityGUI(size, items, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "EntityGUI Main Menu");
+        new EntityGUI(size, items, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "EntityGUI Main Menu").open(player);
 
     }
 
