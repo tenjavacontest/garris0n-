@@ -3,5 +3,5 @@ version: ${project.version}
 author: Garris0n
 main: com.garris0n.EntityGUI.Main
 commands:
-  entityGUI{
+  entityGUI:
     aliases: egui
