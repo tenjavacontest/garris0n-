@@ -68,8 +68,6 @@ public class EntityGUI{
      */
     public void open(Player player){
 
-        Main.guiHandler.menuOpened(player, this);
-
         if(Util.openInventoryMatches(player, title, size.getSize())){
 
             openInside(player);
@@ -78,6 +76,7 @@ public class EntityGUI{
         }
 
         player.openInventory(getInventory());
+        Main.guiHandler.menuOpened(player, this);
 
     }
 
@@ -95,6 +94,8 @@ public class EntityGUI{
         for(int i = 0; i < size.getSize(); i++)
             if(items.length > i)
                 inventory.setItem(i, items[i].getItemStack());
+
+        Main.guiHandler.menuOpened(player, this);
 
     }
 
