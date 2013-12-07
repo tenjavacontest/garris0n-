@@ -68,7 +68,7 @@ public class EntityGUI{
      */
     public void open(Player player){
 
-        Main.handler.menuOpened(player, this);
+        Main.guiHandler.menuOpened(player, this);
 
         if(Util.openInventoryMatches(player, title, size.getSize())){
 

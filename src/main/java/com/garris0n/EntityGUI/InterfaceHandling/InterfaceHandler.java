@@ -13,7 +13,7 @@ public class InterfaceHandler{
         GUIItemStack[] items = new GUIItemStack[size.getSize()];
 
         for(int i = 0; i < MainMenuItem.values().length; i++)
-            items[i] = MainMenuItem.values()[i].getPage().getMainMenuItem();
+            items[i] = MainMenuItem.values()[i].getGuiItem();
 
         new EntityGUI(size, items, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "EntityGUI Main Menu");
 

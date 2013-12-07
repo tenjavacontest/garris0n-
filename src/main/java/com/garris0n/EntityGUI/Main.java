@@ -2,6 +2,7 @@ package com.garris0n.EntityGUI;
 
 import com.garris0n.EntityGUI.Commands.CommandEntityGUI;
 import com.garris0n.EntityGUI.GUI.GUIHandler;
+import com.garris0n.EntityGUI.InterfaceHandling.InterfaceHandler;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,12 +11,14 @@ public class Main extends JavaPlugin{
 
     public static Main instance;
 
-    public static GUIHandler handler;
+    public static GUIHandler guiHandler;
+    public static InterfaceHandler interfaceHandler;
 
     public void onEnable(){
 
         instance = this;
-        handler = new GUIHandler();
+        guiHandler = new GUIHandler();
+        interfaceHandler = new InterfaceHandler();
 
         registerCommands();
         registerEvents();
@@ -25,7 +28,8 @@ public class Main extends JavaPlugin{
     public void onDisable(){
 
         instance = null;
-        handler = null;
+        guiHandler = null;
+        interfaceHandler = null;
 
     }
 
@@ -33,7 +37,7 @@ public class Main extends JavaPlugin{
 
         PluginManager pluginManager = getServer().getPluginManager();
 
-        pluginManager.registerEvents(handler, this);
+        pluginManager.registerEvents(guiHandler, this);
 
     }
 
