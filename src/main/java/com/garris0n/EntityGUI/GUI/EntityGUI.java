@@ -4,6 +4,7 @@ import com.garris0n.EntityGUI.Main;
 import com.garris0n.EntityGUI.Util.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 
 public class EntityGUI{
@@ -20,6 +21,25 @@ public class EntityGUI{
         this.size = size;
         this.items = items;
         this.title = title;
+
+    }
+
+    /**
+     * Dispatches a click to its appropriate item.
+     *
+     * @param event the click event
+     */
+    public void click(InventoryClickEvent event){
+
+        if(event.getSlot() != event.getRawSlot()) //make sure the click was in the "top" inventory
+            return;
+
+        event.setCancelled(true);
+
+        if(items[event.getSlot()] == null)
+            return;
+
+        items[event.getSlot()].click((Player) event.getWhoClicked(), event.getClick(), event.getHotbarButton());
 
     }
 
@@ -79,23 +99,3 @@ public class EntityGUI{
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
