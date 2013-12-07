@@ -91,4 +91,19 @@ public class Util{
 
     }
 
+    /**
+     * Gets red or green based on a boolean.
+     *
+     * @param flag the flag
+     * @return red if false, green if true
+     */
+    public static ChatColor redGreen(boolean flag){
+
+        if(flag)
+            return ChatColor.GREEN;
+
+        return ChatColor.RED;
+
+    }
+
 }

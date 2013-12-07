@@ -13,18 +13,11 @@ public abstract class Page{
 
     public abstract EntityGUI getGUI();
 
+    public abstract EntityGUI getGUI(Player player);
+
     public void openGUI(Player player){
 
         getGUI().open(player);
-
-    }
-
-    public void addHotbar(GUIItemStack[] items){
-
-        for(int i = 0; i < 18; i++)
-            items[i] = Util.getBorderItem();
-
-        items[0] = PageHotbarItem.DELETE.getGuiItem();
 
     }
 

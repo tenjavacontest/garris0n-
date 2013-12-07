@@ -1,6 +1,8 @@
 package com.garris0n.EntityGUI.InterfaceHandling;
 
-import org.bukkit.entity.Player;
+import com.garris0n.EntityGUI.GUI.GUIItemStack;
+import com.garris0n.EntityGUI.InterfaceHandling.Items.PageHotbarItem;
+import com.garris0n.EntityGUI.Util.Util;
 
 public class Settings{
 
@@ -15,6 +17,15 @@ public class Settings{
     public void setAmountToSpawn(int amountToSpawn){
 
         this.amountToSpawn = amountToSpawn;
+
+    }
+
+    public void draw(GUIItemStack[] items){
+
+        for(int i = 0; i < 18; i++)
+            items[i] = Util.getBorderItem();
+
+        items[0] = PageHotbarItem.DELETE.getGuiItem();
 
     }
 
