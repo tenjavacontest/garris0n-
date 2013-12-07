@@ -46,7 +46,7 @@ public class CommandEntityGUI implements CommandExecutor{
             @Override
             public void numberKeyClick(Player player, int key){
 
-                player.chat("nmber click, key: " + key);
+                player.chat("number click, key: " + key);
 
             }
         });
