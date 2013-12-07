@@ -26,7 +26,15 @@ public class InterfaceHandler{
 
     public void reDraw(Player player){
 
-        //TODO: redraw menu
+        if(!pageTypes.containsKey(player.getName())){
+
+            player.sendMessage(ChatColor.RED + "Error: type not found.");
+            player.closeInventory();
+            return;
+
+        }
+
+        pageTypes.get(player.getName()).getPage().getGUI(player).open(player);
 
     }
 
