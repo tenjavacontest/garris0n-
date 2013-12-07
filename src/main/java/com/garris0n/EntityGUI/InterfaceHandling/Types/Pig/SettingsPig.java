@@ -40,9 +40,9 @@ public class SettingsPig extends SettingsAgeable{
                     @Override
                     public void click(Player player, NormalClickType type, boolean shift){
 
-                        if(Main.interfaceHandler.settings.containsKey(player.getName())){
+                        if(Main.interfaceHandler.getSettings(player) != null){
 
-                            ((SettingsPig) Main.interfaceHandler.settings.get(player.getName())).setSaddle(!getSaddle());
+                            ((SettingsPig) Main.interfaceHandler.getSettings(player)).setSaddle(!getSaddle());
                             Main.interfaceHandler.reDraw(player);
 
                         }

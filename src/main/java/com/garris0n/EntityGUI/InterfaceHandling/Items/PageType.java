@@ -73,8 +73,8 @@ public enum PageType{
             @Override
             public void click(Player player, NormalClickType type, boolean shift){
 
-                Main.interfaceHandler.pageTypes.put(player.getName(), pageType);
-                Main.interfaceHandler.settings.put(player.getName(), getNewSettings());
+                Main.interfaceHandler.setPageType(player, pageType);
+                Main.interfaceHandler.setSettings(player, getNewSettings());
                 getPage().openGUI(player);
 
             }

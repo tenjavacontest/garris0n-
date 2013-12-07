@@ -9,8 +9,32 @@ import java.util.HashMap;
 
 public class InterfaceHandler{
 
-    public HashMap<String, Settings> settings = new HashMap<String, Settings>();
-    public HashMap<String, PageType> pageTypes = new HashMap<String, PageType>();
+    private HashMap<String, Settings> settings = new HashMap<String, Settings>();
+    private HashMap<String, PageType> pageTypes = new HashMap<String, PageType>();
+
+    public void setSettings(Player player, Settings settingsToSet){
+
+        settings.put(player.getName(), settingsToSet);
+
+    }
+
+    public void setPageType(Player player, PageType pageType){
+
+        pageTypes.put(player.getName(), pageType);
+
+    }
+
+    public Settings getSettings(Player player){
+
+        return settings.get(player.getName());
+
+    }
+
+    public PageType getPageType(Player player){
+
+        return pageTypes.get(player.getName());
+
+    }
 
     public void openMainMenu(Player player){
 

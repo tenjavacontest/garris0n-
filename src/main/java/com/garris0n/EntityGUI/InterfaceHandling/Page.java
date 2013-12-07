@@ -5,25 +5,22 @@ import com.garris0n.EntityGUI.Main;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-public class Page{
+public abstract class Page{
 
+    public abstract void spawn(Player player);
 
-    public String getInventoryTitle(){
-
-        return ChatColor.BOLD + "Entity Menu";
-
-    }
+    public abstract String getInventoryTitle();
 
     public EntityGUI getGUI(Player player){
 
-        if(!Main.interfaceHandler.settings.containsKey(player.getName()))
+        if(Main.interfaceHandler.getSettings(player) == null)
             return null;
 
         GUISize size = GUISize.EXTRA_LARGE;
 
         GUIItemStack[] items = new GUIItemStack[size.getSize()];
 
-        Main.interfaceHandler.settings.get(player.getName()).draw(items);
+        Main.interfaceHandler.getSettings(player).draw(items);
 
         return new EntityGUI(size, items, getInventoryTitle());
 

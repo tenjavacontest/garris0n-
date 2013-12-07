@@ -38,9 +38,9 @@ public class SettingsAgeable extends Settings{
                     @Override
                     public void click(Player player, NormalClickType type, boolean shift){
 
-                        if(Main.interfaceHandler.settings.containsKey(player.getName())){
+                        if(Main.interfaceHandler.getSettings(player) != null){
 
-                            ((SettingsAgeable)  Main.interfaceHandler.settings.get(player.getName())).setBaby(!getBaby());
+                            ((SettingsAgeable)  Main.interfaceHandler.getSettings(player)).setBaby(!getBaby());
                             Main.interfaceHandler.reDraw(player);
 
                         }
