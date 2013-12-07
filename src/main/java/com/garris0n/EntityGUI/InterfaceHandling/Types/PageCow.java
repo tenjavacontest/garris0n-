@@ -10,13 +10,6 @@ public class PageCow extends Page{
 
 
     @Override
-    public GUIItemStack getMainMenuItem(){
-
-        return null;
-
-    }
-
-    @Override
     public EntityGUI getGUI(){
 
         return null;

@@ -1,8 +1,8 @@
 package com.garris0n.EntityGUI.InterfaceHandling;
 
-import com.garris0n.EntityGUI.GUI.GUIItemStack;
-import com.garris0n.EntityGUI.GUI.GUISize;
+import com.garris0n.EntityGUI.GUI.*;
 import com.garris0n.EntityGUI.InterfaceHandling.Items.MainMenuItem;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class InterfaceHandler{
@@ -15,7 +15,7 @@ public class InterfaceHandler{
         for(int i = 0; i < MainMenuItem.values().length; i++)
             items[i] = MainMenuItem.values()[i].getPage().getMainMenuItem();
 
-
+        new EntityGUI(size, items, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "EntityGUI Main Menu");
 
     }
 

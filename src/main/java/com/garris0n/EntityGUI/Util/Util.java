@@ -24,5 +24,44 @@ public class Util{
 
     }
 
+    /**
+     * Simple method to capitalize the first letter of a string.
+     *
+     * @param string the string
+     * @return the capitalized string
+     */
+    public static String capitalize(String string){
+
+        char[] chars = string.toCharArray();
+
+        chars[0] = Character.toUpperCase(chars[0]);
+
+        return new String(chars);
+
+    }
+
+    /**
+     * Slightly less simple method to capitalize the first letter
+     * of every word in a String.
+     *
+     * @param string the string
+     * @return the capitalized string
+     */
+    public static String capitalizeAllWords(String string){
+
+        if(!string.contains(" "))
+            return capitalize(string);
+
+        StringBuilder builder = new StringBuilder();
+
+        String[] split = string.split(" ");
+
+        for(String s : split)
+            builder.append(" ").append(capitalize(string));
+
+        return builder.substring(1);
+
+    }
+
 
 }

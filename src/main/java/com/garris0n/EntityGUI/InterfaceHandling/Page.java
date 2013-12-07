@@ -7,8 +7,6 @@ import org.bukkit.entity.Player;
 
 public abstract class Page{
 
-    public abstract GUIItemStack getMainMenuItem();
-
     public abstract EntityGUI getGUI();
 
     public abstract void openGUI(Player player);
