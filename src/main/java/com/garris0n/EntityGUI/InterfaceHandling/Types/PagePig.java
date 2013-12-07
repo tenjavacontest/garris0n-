@@ -1,14 +1,9 @@
 package com.garris0n.EntityGUI.InterfaceHandling.Types;
 
 import com.garris0n.EntityGUI.GUI.*;
-import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
-import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
 import com.garris0n.EntityGUI.InterfaceHandling.Items.MainMenuItem;
 import com.garris0n.EntityGUI.InterfaceHandling.Page;
-import com.garris0n.EntityGUI.Util.EZItemStack;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
 public class PagePig extends Page{
@@ -22,9 +17,12 @@ public class PagePig extends Page{
     @Override
     public EntityGUI getGUI(){
 
-        GUISize size = GUISize.LARGE;
+        GUISize size = GUISize.EXTRA_LARGE;
 
-        return new EntityGUI(size, new GUIItemStack[size.getSize()], ChatColor.BOLD + "Pig Menu");
+        GUIItemStack[] items = new GUIItemStack[size.getSize()];
+        addHotbar(items);
+
+        return new EntityGUI(size, items, ChatColor.BOLD + "Pig Menu");
 
     }
 

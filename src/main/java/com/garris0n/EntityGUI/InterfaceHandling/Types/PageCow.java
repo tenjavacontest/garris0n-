@@ -17,9 +17,9 @@ public class PageCow extends Page{
     @Override
     public EntityGUI getGUI(){
 
-        GUISize size = GUISize.LARGE;
+        GUISize size = GUISize.EXTRA_LARGE;
 
-        return new EntityGUI(size, new GUIItemStack[size.getSize()], ChatColor.BOLD + "Pig Menu");
+        return new EntityGUI(size, new GUIItemStack[size.getSize()], ChatColor.BOLD + "Cow Menu");
 
     }
 

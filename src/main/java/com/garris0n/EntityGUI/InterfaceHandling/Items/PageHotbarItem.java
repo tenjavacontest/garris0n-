@@ -12,7 +12,8 @@ import org.bukkit.entity.Player;
 public enum PageHotbarItem{
 
     DELETE(new EZItemStack(Material.STAINED_CLAY, 0, (short) 14)
-            .name(ChatColor.RED.toString() + ChatColor.BOLD + "Delete"),
+            .name(ChatColor.RED.toString() + ChatColor.BOLD + "Delete")
+            .lore(ChatColor.DARK_PURPLE + "Click to delete your progress", ChatColor.DARK_PURPLE + "go back to the Main Menu."),
             new GUIRunnable(){
 
                 @Override
@@ -31,9 +32,11 @@ public enum PageHotbarItem{
 
     private EZItemStack item;
     private GUIRunnable runnable;
+
     PageHotbarItem(EZItemStack item, GUIRunnable runnable){
 
-
+        this.item = item;
+        this.runnable = runnable;
 
     }
 

@@ -13,6 +13,8 @@ import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
+import java.lang.reflect.InvocationTargetException;
+
 public enum MainMenuItem{
 
     PIG(PagePig.class, EntityType.PIG),
@@ -33,13 +35,19 @@ public enum MainMenuItem{
 
         try{
 
-            return clazz.newInstance();
+            return clazz.getConstructor(MainMenuItem.class).newInstance(this);
 
         }
         catch(InstantiationException e){
             e.printStackTrace();
         }
         catch(IllegalAccessException e){
+            e.printStackTrace();
+        }
+        catch(NoSuchMethodException e){
+            e.printStackTrace();
+        }
+        catch(InvocationTargetException e){
             e.printStackTrace();
         }
 

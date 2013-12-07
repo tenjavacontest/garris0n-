@@ -5,8 +5,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class EZItemStack{
 
@@ -53,6 +52,12 @@ public class EZItemStack{
         item.setItemMeta(meta);
 
         return this;
+
+    }
+
+    public EZItemStack lore(String... lore){
+
+        return lore(Arrays.asList(lore));
 
     }
 

@@ -75,7 +75,7 @@ public class Util{
      */
     public static GUIItemStack getBorderItem(){
 
-        EZItemStack item = new EZItemStack(Material.WALL_SIGN).name("");
+        EZItemStack item = new EZItemStack(Material.WALL_SIGN).name(ChatColor.RESET.toString());
 
         return new GUIItemStack(item, new GUIRunnable(){
 
