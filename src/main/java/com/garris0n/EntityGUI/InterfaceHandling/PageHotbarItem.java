@@ -13,7 +13,7 @@ public enum PageHotbarItem{
 
     DELETE(new EZItemStack(Material.REDSTONE_BLOCK)
             .name(ChatColor.RED.toString() + ChatColor.BOLD + "Delete")
-            .lore(ChatColor.DARK_PURPLE + "Click to delete your progress", ChatColor.DARK_PURPLE + "go back to the Main Menu."),
+            .lore(ChatColor.DARK_PURPLE + "Click to delete your progress", ChatColor.DARK_PURPLE + "and go back to the Main Menu."),
             new GUIRunnable(){
 
                 @Override
