@@ -15,7 +15,7 @@ Permissions:
 
 **EntityGUI.entity.CREEPER** - Ability to spawn creepers.
 
-**EntityGUI.entity.PIG **- Ability to spawn pigs.
+**EntityGUI.entity.PIG ** - Ability to spawn pigs.
 
 **EntityGUI.entity.SHEEP** - Ability to spawn sheep.
 
