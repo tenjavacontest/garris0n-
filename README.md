@@ -1,7 +1,10 @@
 Garris0n
 =========
 Don't mind me, just losing the contest.
-Minecraft 1.6.4 (Bukkit 1.6.4-R2.0)
+
+Written for and tested on Minecraft 1.6.4 (Bukkit 1.6.4-R2.0)
+
+Notes: Sadly didn't get to do all the entities, but it's been fun :)
 
 Commands: /entitygui (/egui)
 
@@ -15,7 +18,7 @@ Permissions:
 
 **EntityGUI.entity.CREEPER** - Ability to spawn creepers.
 
-**EntityGUI.entity.PIG ** - Ability to spawn pigs.
+**EntityGUI.entity.PIG** - Ability to spawn pigs.
 
 **EntityGUI.entity.SHEEP** - Ability to spawn sheep.
 
