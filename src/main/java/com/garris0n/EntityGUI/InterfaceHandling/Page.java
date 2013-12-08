@@ -2,7 +2,6 @@ package com.garris0n.EntityGUI.InterfaceHandling;
 
 import com.garris0n.EntityGUI.GUI.*;
 import com.garris0n.EntityGUI.Main;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public abstract class Page{

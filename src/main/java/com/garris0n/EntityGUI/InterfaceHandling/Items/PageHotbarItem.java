@@ -47,7 +47,88 @@ public enum PageHotbarItem{
 
                 @Override
                 public void numberKeyClick(Player player, int key){}
+            }),
+    DOWN_TEN(new EZItemStack(Material.STAINED_CLAY, 1, (short) 14)
+            .name(ChatColor.RED.toString() + ChatColor.BOLD + "Spawn Amount -10")
+            .lore(ChatColor.DARK_PURPLE + "Click to reduce the spawn amount by ten."),
+            new GUIRunnable(){
+
+                @Override
+                public void click(Player player, NormalClickType type, boolean shift){
+
+                    if(Main.interfaceHandler.getSettings(player) != null)
+                        Main.interfaceHandler.getSettings(player).setAmountToSpawn(Main.interfaceHandler.getSettings(player).getAmountToSpawn() - 10);
+                    Main.interfaceHandler.reDraw(player);
+
+                }
+
+                @Override
+                public void doubleClick(Player player){}
+
+                @Override
+                public void numberKeyClick(Player player, int key){}
+            }),
+    DOWN_ONE(new EZItemStack(Material.STAINED_CLAY, 1, (short) 6)
+            .name(ChatColor.RED.toString() + ChatColor.BOLD + "Spawn Amount -1")
+            .lore(ChatColor.DARK_PURPLE + "Click to reduce the spawn amount by one."),
+            new GUIRunnable(){
+
+                @Override
+                public void click(Player player, NormalClickType type, boolean shift){
+
+                    if(Main.interfaceHandler.getSettings(player) != null)
+                        Main.interfaceHandler.getSettings(player).setAmountToSpawn(Main.interfaceHandler.getSettings(player).getAmountToSpawn() - 1);
+                    Main.interfaceHandler.reDraw(player);
+
+                }
+
+                @Override
+                public void doubleClick(Player player){}
+
+                @Override
+                public void numberKeyClick(Player player, int key){}
+            }),
+    UP_ONE(new EZItemStack(Material.STAINED_CLAY, 1, (short) 5)
+            .name(ChatColor.GREEN.toString() + ChatColor.BOLD + "Spawn Amount +1")
+            .lore(ChatColor.DARK_PURPLE + "Click to increase the spawn amount by one."),
+            new GUIRunnable(){
+
+                @Override
+                public void click(Player player, NormalClickType type, boolean shift){
+
+                    if(Main.interfaceHandler.getSettings(player) != null)
+                        Main.interfaceHandler.getSettings(player).setAmountToSpawn(Main.interfaceHandler.getSettings(player).getAmountToSpawn() + 1);
+                    Main.interfaceHandler.reDraw(player);
+
+                }
+
+                @Override
+                public void doubleClick(Player player){}
+
+                @Override
+                public void numberKeyClick(Player player, int key){}
+            }),
+    UP_TEN(new EZItemStack(Material.STAINED_CLAY, 1, (short) 13)
+            .name(ChatColor.GREEN.toString() + ChatColor.BOLD + "Spawn Amount +10")
+            .lore(ChatColor.DARK_PURPLE + "Click to increase the spawn amount by ten."),
+            new GUIRunnable(){
+
+                @Override
+                public void click(Player player, NormalClickType type, boolean shift){
+
+                    if(Main.interfaceHandler.getSettings(player) != null)
+                        Main.interfaceHandler.getSettings(player).setAmountToSpawn(Main.interfaceHandler.getSettings(player).getAmountToSpawn() + 10);
+                    Main.interfaceHandler.reDraw(player);
+
+                }
+
+                @Override
+                public void doubleClick(Player player){}
+
+                @Override
+                public void numberKeyClick(Player player, int key){}
             });
+
 
     private EZItemStack item;
     private GUIRunnable runnable;
@@ -59,10 +140,29 @@ public enum PageHotbarItem{
 
     }
 
+    /**
+     * Gets the gui item for this PageHotbarItem.
+     *
+     * @return the gui item
+     */
     public GUIItemStack getGuiItem(){
 
         return new GUIItemStack(item, runnable);
 
     }
+
+    /**
+     * Same functionality as getGuiItem() but with the ability to tag on an extra line of lore.
+     * For use to display the number of entities to be spawned.
+     *
+     * @param extraLore the extra lore
+     * @return the gui item
+     */
+    public GUIItemStack getGuiItem(String extraLore){
+
+        return new GUIItemStack(item.lore(extraLore), runnable);
+
+    }
+
 
 }
