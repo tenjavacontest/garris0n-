@@ -7,10 +7,14 @@ import com.garris0n.EntityGUI.InterfaceHandling.Types.Chicken.PageChicken;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Chicken.SettingsChicken;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Cow.PageCow;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Cow.SettingsCow;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Creeper.PageCreeper;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Creeper.SettingsCreeper;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.PagePig;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.SettingsPig;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep.PageSheep;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep.SettingsSheep;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Silverfish.PageSilverfish;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Silverfish.SettingsSilverfish;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Skeleton.PageSkeleton;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Skeleton.SettingsSkeleton;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Squid.PageSquid;
@@ -33,7 +37,9 @@ public enum PageType{
     CHICKEN(new PageChicken(), SettingsChicken.class, EntityType.CHICKEN),
     SQUID(new PageSquid(), SettingsSquid.class, EntityType.SQUID),
     ZOMBIE(new PageZombie(), SettingsZombie.class, EntityType.ZOMBIE),
-    SKELETON(new PageSkeleton(), SettingsSkeleton.class, EntityType.SKELETON);
+    SKELETON(new PageSkeleton(), SettingsSkeleton.class, EntityType.SKELETON),
+    CREEPER(new PageCreeper(), SettingsCreeper.class, EntityType.CREEPER),
+    SILVERFISH(new PageSilverfish(), SettingsSilverfish.class, EntityType.SILVERFISH);
 
 
     private Page page;
