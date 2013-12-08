@@ -19,6 +19,9 @@ public class PageCow extends Page{
             if(settings.getBaby())
                 cow.setBaby();
 
+            if(settings.getFire())
+                cow.setFireTicks(1000);
+
         }
 
     }

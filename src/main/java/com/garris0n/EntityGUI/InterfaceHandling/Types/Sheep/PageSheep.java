@@ -20,6 +20,9 @@ public class PageSheep extends Page{
             if(settings.getBaby())
                 sheep.setBaby();
 
+            if(settings.getFire())
+                sheep.setFireTicks(1000);
+
             sheep.setColor(settings.getColor());
 
         }

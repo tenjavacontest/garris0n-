@@ -37,7 +37,7 @@ public class SettingsSheep extends SettingsAgeable{
 
         super.draw(items);
 
-        items[19] = new GUIItemStack(new EZItemStack(Material.WOOL, 1, color.getWoolData())
+        items[20] = new GUIItemStack(new EZItemStack(Material.WOOL, 1, color.getWoolData())
                 .name(ChatColor.GREEN + "Wool Color")
                 .lore(ChatColor.DARK_PURPLE + "Click to change."),
                 new GUIRunnable(){

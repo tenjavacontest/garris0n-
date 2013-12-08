@@ -1,10 +1,10 @@
-package com.garris0n.EntityGUI.InterfaceHandling.Items;
+package com.garris0n.EntityGUI.InterfaceHandling;
 
 import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
 import com.garris0n.EntityGUI.GUI.Runnables.NormalClickType;
-import com.garris0n.EntityGUI.InterfaceHandling.Page;
-import com.garris0n.EntityGUI.InterfaceHandling.Settings;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Chicken.PageChicken;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Chicken.SettingsChicken;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Cow.PageCow;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Cow.SettingsCow;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.PagePig;
@@ -23,7 +23,8 @@ public enum PageType{
 
     PIG(new PagePig(), SettingsPig.class, EntityType.PIG),
     COW(new PageCow(), SettingsCow.class, EntityType.COW),
-    SHEEP(new PageSheep(), SettingsSheep.class, EntityType.SHEEP);
+    SHEEP(new PageSheep(), SettingsSheep.class, EntityType.SHEEP),
+    CHICKEN(new PageChicken(), SettingsChicken.class, EntityType.CHICKEN);
 
 
     private Page page;

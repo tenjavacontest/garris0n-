@@ -19,6 +19,9 @@ public class PagePig extends Page{
             if(settings.getBaby())
                 pig.setBaby();
 
+            if(settings.getFire())
+                pig.setFireTicks(1000);
+
             pig.setSaddle(settings.getSaddle());
 
 

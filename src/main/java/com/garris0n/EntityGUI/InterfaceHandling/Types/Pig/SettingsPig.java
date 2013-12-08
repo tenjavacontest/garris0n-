@@ -32,7 +32,7 @@ public class SettingsPig extends SettingsAgeable{
 
         super.draw(items);
 
-        items[19] = new GUIItemStack(new EZItemStack(Material.SADDLE)
+        items[20] = new GUIItemStack(new EZItemStack(Material.SADDLE)
                 .name(Util.redGreen(saddle) + "Saddle")
                 .lore(ChatColor.DARK_PURPLE + "Click to toggle."),
                 new GUIRunnable(){

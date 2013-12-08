@@ -1,4 +1,4 @@
-package com.garris0n.EntityGUI.InterfaceHandling.Items;
+package com.garris0n.EntityGUI.InterfaceHandling;
 
 import com.garris0n.EntityGUI.GUI.GUIItemStack;
 import com.garris0n.EntityGUI.GUI.Runnables.GUIRunnable;
@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 public enum PageHotbarItem{
 
-    DELETE(new EZItemStack(Material.STAINED_CLAY, 0, (short) 14)
+    DELETE(new EZItemStack(Material.REDSTONE_BLOCK)
             .name(ChatColor.RED.toString() + ChatColor.BOLD + "Delete")
             .lore(ChatColor.DARK_PURPLE + "Click to delete your progress", ChatColor.DARK_PURPLE + "go back to the Main Menu."),
             new GUIRunnable(){

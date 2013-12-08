@@ -1,7 +1,6 @@
 package com.garris0n.EntityGUI.InterfaceHandling;
 
 import com.garris0n.EntityGUI.GUI.*;
-import com.garris0n.EntityGUI.InterfaceHandling.Items.PageType;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
@@ -44,7 +43,7 @@ public class InterfaceHandler{
         for(int i = 0; i < PageType.values().length; i++)
             items[i] = PageType.values()[i].getGuiItem();
 
-        new EntityGUI(size, items, ChatColor.BLUE.toString() + ChatColor.BOLD + "EntityGUI Main Menu").open(player);
+        new EntityGUI(size, items, ChatColor.BOLD + "Main Menu").open(player);
 
     }
 

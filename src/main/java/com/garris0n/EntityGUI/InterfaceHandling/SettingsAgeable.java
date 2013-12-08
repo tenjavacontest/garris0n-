@@ -30,7 +30,7 @@ public class SettingsAgeable extends Settings{
     public void draw(GUIItemStack[] items){
 
         super.draw(items);
-        items[18] = new GUIItemStack(new EZItemStack(Material.WHEAT)
+        items[19] = new GUIItemStack(new EZItemStack(Material.WHEAT)
                 .name(Util.redGreen(baby) + "Baby")
                 .lore(ChatColor.DARK_PURPLE + "Click to toggle."),
                 new GUIRunnable(){
@@ -40,7 +40,7 @@ public class SettingsAgeable extends Settings{
 
                         if(Main.interfaceHandler.getSettings(player) != null){
 
-                            ((SettingsAgeable)  Main.interfaceHandler.getSettings(player)).setBaby(!getBaby());
+                            ((SettingsAgeable)  Main.interfaceHandler.getSettings(player)).setBaby(!((SettingsAgeable) Main.interfaceHandler.getSettings(player)).getBaby());
                             Main.interfaceHandler.reDraw(player);
 
                         }
