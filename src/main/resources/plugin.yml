@@ -5,3 +5,6 @@ main: com.garris0n.EntityGUI.Main
 commands:
   entityGUI:
     aliases: egui
+    permission: EntityGUI.use
+    usage: /entitygui
+    permission-message: §4You do not have permission to use this command.

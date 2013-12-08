@@ -60,6 +60,12 @@ public enum PageType{
 
     }
 
+    public EntityType getType(){
+
+        return type;
+
+    }
+
     public Settings getNewSettings(){
 
         try{
@@ -89,9 +95,18 @@ public enum PageType{
             @Override
             public void click(Player player, NormalClickType type, boolean shift){
 
-                Main.interfaceHandler.setPageType(player, pageType);
-                Main.interfaceHandler.setSettings(player, getNewSettings());
-                getPage().openGUI(player);
+                if(player.hasPermission("EntityGUI.entity." + getType().toString())){
+
+                    Main.interfaceHandler.setPageType(player, pageType);
+                    Main.interfaceHandler.setSettings(player, getNewSettings());
+                    getPage().openGUI(player);
+
+                }
+                else{
+
+                    player.sendMessage(ChatColor.DARK_RED + "You do not have permission to spawn that entity.");
+
+                }
 
             }
 
