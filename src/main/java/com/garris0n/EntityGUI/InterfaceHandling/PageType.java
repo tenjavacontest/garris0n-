@@ -11,6 +11,8 @@ import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.PagePig;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Pig.SettingsPig;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep.PageSheep;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Sheep.SettingsSheep;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Skeleton.PageSkeleton;
+import com.garris0n.EntityGUI.InterfaceHandling.Types.Skeleton.SettingsSkeleton;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Squid.PageSquid;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Squid.SettingsSquid;
 import com.garris0n.EntityGUI.InterfaceHandling.Types.Zombie.PageZombie;
@@ -30,7 +32,8 @@ public enum PageType{
     SHEEP(new PageSheep(), SettingsSheep.class, EntityType.SHEEP),
     CHICKEN(new PageChicken(), SettingsChicken.class, EntityType.CHICKEN),
     SQUID(new PageSquid(), SettingsSquid.class, EntityType.SQUID),
-    ZOMBIE(new PageZombie(), SettingsZombie.class, EntityType.ZOMBIE);
+    ZOMBIE(new PageZombie(), SettingsZombie.class, EntityType.ZOMBIE),
+    SKELETON(new PageSkeleton(), SettingsSkeleton.class, EntityType.SKELETON);
 
 
     private Page page;

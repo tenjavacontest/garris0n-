@@ -37,7 +37,7 @@ public class InterfaceHandler{
 
     public void openMainMenu(Player player){
 
-        GUISize size = GUISize.LARGE;
+        GUISize size = GUISize.EXTRA_LARGE;
         GUIItemStack[] items = new GUIItemStack[size.getSize()];
 
         for(int i = 0; i < PageType.values().length; i++)
